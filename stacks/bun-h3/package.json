@@ -1,0 +1,13 @@
+{
+  "name": "bun-h3",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "h3": "2.0.8",
+    "zod": "4.6.7",
+    "jose": "6.2.13"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.4"
+  }
+}

@@ -1,0 +1,48 @@
+node-native  (lang node-native, target http://mc-target,http://mc-target-2,http://mc-target-3,http://mc-target-4)
+SCORE: 36000 users held 5 minutes
+probes: highest pass 36000, lowest fail 37000
+
+hold at 36000 users: 9419 req/s, p50 18.0 ms, p95 212.9 ms, p99 496.9 ms, errors 0.000%
+target over the hold window (299 samples): cpu 98%, steal 0%, app 76% / db 0% / nginx 0% (of one core)
+
+36000 users on 1 box(es), http://mc-target,http://mc-target-2,http://mc-target-3,http://mc-target-4, measured 300 s after a 60 s ramp
+endpoint                                      count    req/s      p50      p90      p95      p99      max    err%
+GET /api/articles/:slug                      561713   1872.4     15.9     91.8    149.5    310.5      585    0.00
+GET /api/articles/:slug/comments             560954   1869.8     19.8    154.5    265.5    582.7     1009    0.00
+GET /api/tags                                560033   1866.8     12.3     86.9    144.8    305.2      582    0.00
+GET /api/articles                            332712   1109.0     21.5    156.0    268.3    578.6     1008    0.00
+GET /api/articles/feed                       227271    757.6     23.2    158.0    269.1    583.7     1013    0.00
+GET /api/profiles/:username                  152109    507.0     15.0     90.6    148.7    309.8      582    0.00
+GET /api/articles?tag                        121989    406.6     23.8    165.6    279.0    588.8     1012    0.00
+GET /api/articles?author                     121823    406.1     20.4    154.8    268.3    579.6     1007    0.00
+POST /api/articles/:slug/favorite             54864    182.9     31.6    234.8    394.8    858.1     1589    0.00
+POST /api/articles/:slug/comments             37836    126.1     25.5    169.0    284.9    590.8     1005    0.00
+GET /api/articles?favorited                   30263    100.9     20.9    153.6    259.3    574.0     1000    0.00
+POST /api/profiles/:username/follow           16668     55.6     24.2    166.3    286.0    598.5     1009    0.00
+GET /api/user                                 13533     45.1     15.0     91.7    149.6    321.5      585    0.00
+POST /api/articles                            12141     40.5     39.9    187.3    301.1    600.6     1015    0.00
+DELETE /api/articles/:slug/favorite            5991     20.0     32.5    249.7    424.7    867.3     1436    0.00
+DELETE /api/profiles/:username/follow          5830     19.4     24.0    156.9    276.2    580.6      955    0.00
+PUT /api/user                                  4678     15.6     17.6     87.4    143.1    298.0      525    0.00
+POST /api/users/login                          2868      9.6    127.4    219.5    275.5    445.2      637    0.00
+DELETE /api/articles/:slug/comments/:id        1718      5.7     25.4    154.6    256.0    551.9     1002    0.00
+PUT /api/articles/:slug                         720      2.4     28.4    210.0    341.8    726.0     1268    0.00
+POST /api/users                                  60      0.2    134.4    208.1    311.6    332.5      406    0.00
+ALL                                         2825774   9419.2     18.0    127.9    212.9    496.9     1589    0.00
+mix: 1.85 calls/page, 0.262 req/s per user, 5.0% writes, 1523427 page views
+box 0 (host-01): 36000 users, CPU avg 6% max 12%, loadgen proc 6%, RSS peak 719 MB, 36000 TCP connects, behind=false
+verdict: PASS   [p95 < 500 ms, p99 < 1000 ms, errors < 1%]
+lg_limited: no
+
+phase         users   pass  lg     req/s     p50     p95     p99   err%
+probe-4000     4000   true  false    1058     1.6     3.9     5.7   0.00
+probe-8000     8000   true  false    2110     2.2     4.6     6.4   0.00
+probe-16000   16000   true  false    4230     2.4     5.6     8.2   0.00
+probe-32000   32000   true  false    8477     6.1    40.7    80.3   0.00
+probe-64000   64000   false false    7125  5484.5  8319.0 10002.4   1.44
+probe-48000   48000   false false    7576  2578.4  4106.2  5083.1   0.00
+probe-40000   40000   false false    8033  1125.4  2092.0  2517.0   0.00
+probe-36000   36000   true  false    9304    39.6   407.3   840.2   0.00
+probe-38000   38000   false false    7597  1111.0  2215.9  2592.8   0.00
+probe-37000   37000   false false    7879   832.5  1894.4  2263.0   0.00
+hold-36000    36000   true  false    9419    18.0   212.9   496.9   0.00

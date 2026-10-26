@@ -1,0 +1,11 @@
+{
+  "name": "bun-native",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "jose": "6.2.13"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.4"
+  }
+}

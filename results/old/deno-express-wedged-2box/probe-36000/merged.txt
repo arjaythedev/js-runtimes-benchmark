@@ -1,0 +1,21 @@
+
+36000 users on 2 box(es), http://mc-target,http://mc-target-2,http://mc-target-3,http://mc-target-4, measured 60 s after a 60 s ramp
+endpoint                                      count    req/s      p50      p90      p95      p99      max    err%
+GET /api/articles/:slug                       55341    922.4  10002.4  10002.4  10002.4  10002.4    10019  100.00
+GET /api/articles/:slug/comments              53908    898.5  10002.4  10002.4  10002.4  10002.4    10019  100.00
+GET /api/tags                                 20853    347.6  10002.4  10002.4  10002.4  10002.4    10019  100.00
+GET /api/articles                             13326    222.1  10002.4  10002.4  10002.4  10002.4    10019  100.00
+GET /api/articles/feed                         9096    151.6  10002.4  10002.4  10002.4  10002.4    10011  100.00
+GET /api/articles?tag                          4539     75.7  10002.4  10002.4  10002.4  10002.4    10002  100.00
+GET /api/user                                  1777     29.6  10002.4  10002.4  10002.4  10002.4    10011  100.00
+POST /api/users/login                           502      8.4  10002.4  10002.4  10002.4  10002.4    10002  100.00
+POST /api/articles                              439      7.3  10002.4  10002.4  10002.4  10002.4    10002  100.00
+PUT /api/user                                   178      3.0  10002.4  10002.4  10002.4  10002.4    10002  100.00
+POST /api/users                                   6      0.1  10002.4  10002.4  10002.4  10002.4    10002  100.00
+ALL                                          159965   2666.1  10002.4  10002.4  10002.4  10002.4    10019  100.00
+errors: timeout=159965  (e.g. "request timeout")
+mix: 1.97 calls/page, 0.074 req/s per user, 0.4% writes, 81331 page views
+box 0 (host-01): 18000 users, CPU avg 1% max 2%, loadgen proc 1%, RSS peak 342 MB, 148902 TCP connects, behind=false
+box 1 (mu-lg1): 18000 users, CPU avg 1% max 3%, loadgen proc 1%, RSS peak 342 MB, 148888 TCP connects, behind=false
+verdict: FAIL (p95 10002 ms >= 500, p99 10002 ms >= 1000, errors 100.00% >= 1%)   [p95 < 500 ms, p99 < 1000 ms, errors < 1%]
+lg_limited: no

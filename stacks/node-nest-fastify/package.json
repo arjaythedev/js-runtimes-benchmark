@@ -1,0 +1,30 @@
+{
+  "name": "conduit-node-nest-fastify",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "build": "nest build",
+    "start:prod": "node dist/main"
+  },
+  "dependencies": {
+    "@nestjs/common": "12.2.0",
+    "@nestjs/core": "12.2.0",
+    "@nestjs/jwt": "12.0.3",
+    "@nestjs/platform-fastify": "12.2.0",
+    "bcrypt": "6.0.0",
+    "class-transformer": "0.5.1",
+    "class-validator": "0.15.1",
+    "pg": "8.23.1",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "12.0.10",
+    "@types/bcrypt": "6.0.0",
+    "@types/node": "26.6.5",
+    "@types/pg": "8.23.1",
+    "typescript": "6.0.3"
+  }
+}

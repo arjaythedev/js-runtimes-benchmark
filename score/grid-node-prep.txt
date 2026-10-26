@@ -1,0 +1,12 @@
+# Node rows re-run with named prepared statements (pg-prepared.ts). Default-pg results: js-results/defaultpg/.
+node-express
+node-fastify
+node-uws
+node-hono
+node-nest-express
+node-koa
+node-h3
+node-nest-fastify
+node-elysia
+node-native
+node-ultimate-express

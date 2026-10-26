@@ -1,0 +1,11 @@
+{
+  "nodeModulesDir": "auto",
+  "imports": {
+    "@hono/standard-validator": "npm:@hono/standard-validator@0.4.0",
+    "bcrypt": "npm:bcrypt@6.0.0",
+    "hono": "npm:hono@4.13.13",
+    "hono/": "npm:/hono@4.13.13/",
+    "postgres": "npm:postgres@3.4.9",
+    "zod": "npm:zod@4.6.7"
+  }
+}

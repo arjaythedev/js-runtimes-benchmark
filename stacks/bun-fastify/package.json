@@ -1,0 +1,12 @@
+{
+  "name": "bun-fastify",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "fastify": "5.12.7",
+    "@fastify/jwt": "10.2.5"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.4"
+  }
+}

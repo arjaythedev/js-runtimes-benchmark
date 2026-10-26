@@ -1,0 +1,29 @@
+
+34000 users on 1 box(es), h2c://mc-target,h2c://mc-target-2,h2c://mc-target-3,h2c://mc-target-4, measured 60 s after a 60 s ramp
+endpoint                                      count    req/s      p50      p90      p95      p99      max    err%
+GET /api/articles/:slug                      106756   1779.3     18.1    128.5    214.4    310.3      511    0.00
+GET /api/articles/:slug/comments             106695   1778.2     19.2    214.0    382.0    575.0      782    0.00
+GET /api/tags                                104416   1740.3     15.0    119.4    207.4    304.9      520    0.00
+GET /api/articles                             61882   1031.4     19.8    207.5    373.5    564.2      782    0.00
+GET /api/articles/feed                        42504    708.4     20.1    206.1    379.1    576.0      777    0.00
+GET /api/profiles/:username                   29117    485.3     18.3    126.1    211.2    310.8      484    0.00
+GET /api/articles?author                      23363    389.4     19.7    210.3    375.6    562.7      781    0.00
+GET /api/articles?tag                         22724    378.7     23.4    212.7    381.2    575.0      776    0.00
+POST /api/articles/:slug/favorite             10391    173.2     27.6    334.1    566.3    855.6     1020    0.00
+POST /api/articles/:slug/comments              7277    121.3     24.8    238.1    395.0    583.2      777    0.00
+GET /api/articles?favorited                    5740     95.7     19.5    205.1    377.9    575.0      744    0.00
+POST /api/profiles/:username/follow            3344     55.7     25.9    223.2    383.0    575.0      752    0.00
+GET /api/user                                  2504     41.7     17.4    127.3    217.6    299.8      483    0.00
+POST /api/articles                             2211     36.9     37.4    263.7    425.2    618.0      777    0.00
+DELETE /api/articles/:slug/favorite            1009     16.8     28.1    305.4    535.6    823.8     1013    0.00
+DELETE /api/profiles/:username/follow           968     16.1     23.4    199.2    357.1    558.1      742    0.00
+PUT /api/user                                   850     14.2     16.5    118.4    201.6    301.8      386    0.00
+POST /api/users/login                           522      8.7    111.6    228.5    303.6    376.3      422    0.00
+DELETE /api/articles/:slug/comments/:id         151      2.5     21.7    162.0    336.6    465.2      578    0.00
+PUT /api/articles/:slug                          53      0.9     39.2    215.7    319.5    560.1      678    0.00
+POST /api/users                                   8      0.1    108.9    116.8    123.1    123.1      123    0.00
+ALL                                          532485   8874.8     18.8    171.9    284.2    532.0     1020    0.00
+mix: 1.86 calls/page, 0.261 req/s per user, 4.9% writes, 287003 page views
+box 0 (host-01): 34000 users, CPU avg 12% max 24%, loadgen proc 11%, RSS peak 2893 MB, 34000 TCP connects, behind=false
+verdict: PASS   [p95 < 500 ms, p99 < 1000 ms, errors < 1%]
+lg_limited: no

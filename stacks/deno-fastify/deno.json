@@ -1,0 +1,9 @@
+{
+  "nodeModulesDir": "auto",
+  "imports": {
+    "@fastify/jwt": "npm:@fastify/jwt@10.2.5",
+    "bcrypt": "npm:bcrypt@6.0.0",
+    "fastify": "npm:fastify@5.12.7",
+    "postgres": "npm:postgres@3.4.9"
+  }
+}

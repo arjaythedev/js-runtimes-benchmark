@@ -1,0 +1,11 @@
+deno-fastify  (lang deno-fastify, target http://mc-target,http://mc-target-2,http://mc-target-3,http://mc-target-4)
+LG-LIMITED at 64000 users (the load boxes, not the server, were the limit); highest clean passing probe 32000
+probes: highest pass 32000, lowest fail none
+
+
+phase         users   pass  lg     req/s     p50     p95     p99   err%
+probe-4000     4000   true  false    1063     1.2     3.3     5.0   0.00
+probe-8000     8000   true  false    2127     1.9     4.7     8.1   0.00
+probe-16000   16000   true  false    4251     2.2     6.3    14.3   0.00
+probe-32000   32000   true  false    8446     8.5    64.4   124.1   0.00
+probe-64000   64000   false true    10255   263.2 10100.7 10379.3  18.79

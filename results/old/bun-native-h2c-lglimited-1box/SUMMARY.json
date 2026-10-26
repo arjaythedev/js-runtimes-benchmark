@@ -1,0 +1,156 @@
+{
+ "label": "bun-native-h2c",
+ "lang": "bun-native-h2c",
+ "target": "h2c://mc-target,h2c://mc-target-2,h2c://mc-target-3,h2c://mc-target-4",
+ "load_boxes": [
+  "local=1"
+ ],
+ "status": "lg_limited",
+ "score_users": 0,
+ "lg_limited_at": 84000,
+ "highest_passing_probe": 88000,
+ "lowest_failing_probe": 92000,
+ "rps": 0,
+ "p50_ms": 0,
+ "p95_ms": 0,
+ "p99_ms": 0,
+ "error_pct": 0,
+ "probes": [
+  {
+   "phase": "probe-4000",
+   "users": 4000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 1057.4666666666667,
+   "p50_ms": 0.901,
+   "p95_ms": 2.759,
+   "p99_ms": 3.721,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-8000",
+   "users": 8000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 2108.8,
+   "p50_ms": 0.859,
+   "p95_ms": 2.849,
+   "p99_ms": 3.931,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-16000",
+   "users": 16000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 4246.916666666667,
+   "p50_ms": 1.279,
+   "p95_ms": 3.507,
+   "p99_ms": 5.355,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-32000",
+   "users": 32000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 8469.666666666666,
+   "p50_ms": 1.057,
+   "p95_ms": 3.427,
+   "p99_ms": 4.983,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-64000",
+   "users": 64000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 16933.466666666667,
+   "p50_ms": 6.911,
+   "p95_ms": 37.087,
+   "p99_ms": 72.383,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-128000",
+   "users": 128000,
+   "pass": false,
+   "lg_limited": false,
+   "rps": 20016.466666666667,
+   "p50_ms": 2533.375,
+   "p95_ms": 4657.151,
+   "p99_ms": 5615.615,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-96000",
+   "users": 96000,
+   "pass": false,
+   "lg_limited": false,
+   "rps": 21125.633333333335,
+   "p50_ms": 685.055,
+   "p95_ms": 1628.159,
+   "p99_ms": 2246.655,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-80000",
+   "users": 80000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 20736.65,
+   "p50_ms": 56.863,
+   "p95_ms": 241.407,
+   "p99_ms": 399.103,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-88000",
+   "users": 88000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 22267.216666666667,
+   "p50_ms": 138.495,
+   "p95_ms": 482.303,
+   "p99_ms": 758.271,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-92000",
+   "users": 92000,
+   "pass": false,
+   "lg_limited": false,
+   "rps": 22372.116666666665,
+   "p50_ms": 299.519,
+   "p95_ms": 760.831,
+   "p99_ms": 1094.655,
+   "error_pct": 0
+  }
+ ],
+ "holds": [
+  {
+   "phase": "hold-88000",
+   "users": 88000,
+   "pass": false,
+   "lg_limited": false,
+   "rps": 21609.67,
+   "p50_ms": 241.791,
+   "p95_ms": 737.791,
+   "p99_ms": 1055.743,
+   "error_pct": 0
+  },
+  {
+   "phase": "hold-84000",
+   "users": 84000,
+   "pass": true,
+   "lg_limited": true,
+   "rps": 21316.053333333333,
+   "p50_ms": 129.855,
+   "p95_ms": 442.879,
+   "p99_ms": 674.815,
+   "error_pct": 0
+  }
+ ],
+ "started": "2026-10-25T00:06:01Z",
+ "finished": "2026-10-25T00:49:05Z"
+}

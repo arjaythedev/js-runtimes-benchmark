@@ -1,0 +1,48 @@
+node-nest-fastify  (lang node-nest-fastify, target http://mc-target,http://mc-target-2,http://mc-target-3,http://mc-target-4)
+SCORE: 33000 users held 5 minutes
+probes: highest pass 33000, lowest fail 34000
+
+hold at 33000 users: 8666 req/s, p50 12.2 ms, p95 164.1 ms, p99 377.3 ms, errors 0.000%
+target over the hold window (299 samples): cpu 98%, steal 0%, app 79% / db 0% / nginx 0% (of one core)
+
+33000 users on 1 box(es), http://mc-target,http://mc-target-2,http://mc-target-3,http://mc-target-4, measured 300 s after a 60 s ramp
+endpoint                                      count    req/s      p50      p90      p95      p99      max    err%
+GET /api/articles/:slug                      516951   1723.2     10.7     76.4    121.7    258.8      633    0.00
+GET /api/articles/:slug/comments             516315   1721.0     12.0    116.2    194.0    454.9      971    0.00
+GET /api/tags                                515616   1718.7      9.4     75.8    120.6    259.1      635    0.00
+GET /api/articles                            306335   1021.1     13.8    116.9    194.6    454.7      970    0.00
+GET /api/articles/feed                       209301    697.7     15.2    117.5    195.3    456.4      976    0.00
+GET /api/profiles/:username                  139735    465.8      9.8     76.1    120.1    258.6      628    0.00
+GET /api/articles?author                     111741    372.5     13.1    114.8    192.0    452.1      969    0.00
+GET /api/articles?tag                        111597    372.0     16.0    133.1    218.9    499.2      974    0.00
+POST /api/articles/:slug/favorite             50374    167.9     20.7    182.4    302.1    693.2     1357    0.00
+POST /api/articles/:slug/comments             34813    116.0     17.4    133.2    213.1    463.4      963    0.00
+GET /api/articles?favorited                   27998     93.3     13.9    118.9    198.8    463.9      926    0.00
+POST /api/profiles/:username/follow           15081     50.3     16.0    127.3    212.0    484.1      947    0.00
+GET /api/user                                 12346     41.2      9.6     76.9    123.2    257.7      615    0.00
+POST /api/articles                            11244     37.5     29.9    166.0    247.2    526.8      933    0.00
+DELETE /api/articles/:slug/favorite            5548     18.5     19.7    181.9    295.2    740.9     1297    0.00
+DELETE /api/profiles/:username/follow          5349     17.8     16.0    133.5    219.3    506.6      956    0.00
+PUT /api/user                                  4308     14.4     11.9     66.8    109.5    225.5      463    0.00
+POST /api/users/login                          2702      9.0    138.9    222.1    268.8    393.2      673    0.00
+DELETE /api/articles/:slug/comments/:id        1607      5.4     15.7    139.5    230.7    469.5      952    0.00
+PUT /api/articles/:slug                         668      2.2     21.1    170.8    278.0    648.2     1242    0.00
+POST /api/users                                  54      0.2    156.8    220.7    261.1    305.4      519    0.00
+ALL                                         2599683   8665.6     12.2     99.6    164.1    377.3     1357    0.00
+mix: 1.86 calls/page, 0.263 req/s per user, 5.0% writes, 1400978 page views
+box 0 (host-01): 33000 users, CPU avg 6% max 11%, loadgen proc 5%, RSS peak 625 MB, 33000 TCP connects, behind=false
+verdict: PASS   [p95 < 500 ms, p99 < 1000 ms, errors < 1%]
+lg_limited: no
+
+phase         users   pass  lg     req/s     p50     p95     p99   err%
+probe-4000     4000   true  false    1066     2.1     4.8     6.7   0.00
+probe-8000     8000   true  false    2127     2.4     5.0     6.7   0.00
+probe-16000   16000   true  false    4271     2.5     5.9     8.8   0.00
+probe-32000   32000   true  false    8456     6.1    64.4   162.7   0.00
+probe-64000   64000   false false    6094  7159.8 10002.4 10002.4  19.51
+probe-48000   48000   false false    6717  3471.4  5591.0  6533.1   0.00
+probe-40000   40000   false false    7172  1686.5  3229.7  3862.5   0.00
+probe-36000   36000   false false    7491   906.2  2244.6  2689.0   0.00
+probe-34000   34000   false false    7898   424.7  1398.8  1911.8   0.00
+probe-33000   33000   true  false    8638    16.8   202.9   619.0   0.00
+hold-33000    33000   true  false    8666    12.2   164.1   377.3   0.00

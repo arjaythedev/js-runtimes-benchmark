@@ -1,0 +1,39 @@
+deno-native-h2c  (lang deno-native-h2c, target h2c://mc-target,h2c://mc-target-2,h2c://mc-target-3,h2c://mc-target-4)
+SCORE: 28000 users held 5 minutes
+probes: highest pass 28000, lowest fail none
+
+hold at 28000 users: 7396 req/s, p50 4.6 ms, p95 24.8 ms, p99 54.0 ms, errors 0.000%
+target over the hold window (299 samples): cpu 85%, steal 0%, app 83% / db 0% / nginx 0% (of one core)
+
+28000 users on 1 box(es), h2c://mc-target,h2c://mc-target-2,h2c://mc-target-3,h2c://mc-target-4, measured 300 s after a 60 s ramp
+endpoint                                      count    req/s      p50      p90      p95      p99      max    err%
+GET /api/articles/:slug                      440396   1468.0      3.5     14.8     23.1     51.2      434    0.00
+GET /api/tags                                440205   1467.3      2.9     13.7     21.8     49.9      359    0.00
+GET /api/articles/:slug/comments             439810   1466.0      4.4     15.1     22.8     47.6      446    0.00
+GET /api/articles                            262341    874.5      6.0     17.3     25.7     49.9      448    0.00
+GET /api/articles/feed                       177856    592.9      5.8     17.2     25.5     49.8      432    0.00
+GET /api/profiles/:username                  119837    399.5      3.3     14.4     22.6     50.3      344    0.00
+GET /api/articles?author                      95967    319.9      4.6     15.9     23.7     48.3      439    0.00
+GET /api/articles?tag                         95097    317.0      6.3     21.0     32.3     65.4      403    0.00
+POST /api/articles/:slug/favorite             43217    144.1      8.0     25.4     38.3     75.5      467    0.00
+POST /api/articles/:slug/comments             30099    100.3      7.1     21.6     32.5     66.0      444    0.00
+GET /api/articles?favorited                   23870     79.6      4.7     15.8     23.7     45.7      301    0.00
+POST /api/profiles/:username/follow           12861     42.9      6.6     20.2     30.6     62.1      360    0.00
+GET /api/user                                 10523     35.1      3.2     14.6     22.8     48.9      312    0.00
+POST /api/articles                             9493     31.6     12.0     36.2     53.9     96.0      412    0.00
+DELETE /api/profiles/:username/follow          4630     15.4      6.3     18.6     28.3     60.6      357    0.00
+DELETE /api/articles/:slug/favorite            4581     15.3      7.6     24.2     35.2     70.0      260    0.00
+PUT /api/user                                  3620     12.1      5.2     14.2     20.6     37.8      267    0.00
+POST /api/users/login                          2227      7.4     75.7    102.1    112.7    146.4      313    0.00
+DELETE /api/articles/:slug/comments/:id        1442      4.8      7.1     20.6     34.8     73.5      157    0.00
+PUT /api/articles/:slug                         586      2.0      9.2     23.3     39.1     74.2      388    0.00
+POST /api/users                                  51      0.2     78.5    110.5    119.6    128.8      136    0.00
+ALL                                         2218709   7395.7      4.6     16.1     24.8     54.0      467    0.00
+mix: 1.86 calls/page, 0.264 req/s per user, 5.0% writes, 1195985 page views
+box 0 (host-01): 28000 users, CPU avg 8% max 24%, loadgen proc 8%, RSS peak 4031 MB, 28000 TCP connects, behind=false
+verdict: PASS   [p95 < 500 ms, p99 < 1000 ms, errors < 1%]
+lg_limited: no
+
+phase         users   pass  lg     req/s     p50     p95     p99   err%
+probe-28000   28000   true  false    7425     5.7    31.8    63.4   0.00
+hold-28000    28000   true  false    7396     4.6    24.8    54.0   0.00

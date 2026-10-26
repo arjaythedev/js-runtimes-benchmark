@@ -1,0 +1,6 @@
+# HTTP/2 side test (h2c, prior knowledge), same code as the h1 rows with H2C=1
+node-fastify-h2c
+node-hono-h2c
+node-native-h2c
+bun-native-h2c
+deno-native-h2c

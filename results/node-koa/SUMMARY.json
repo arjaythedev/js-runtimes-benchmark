@@ -1,0 +1,526 @@
+{
+ "label": "node-koa",
+ "lang": "node-koa",
+ "target": "http://mc-target,http://mc-target-2,http://mc-target-3,http://mc-target-4",
+ "load_boxes": [
+  "local=1"
+ ],
+ "status": "ok",
+ "score_users": 39000,
+ "highest_passing_probe": 39000,
+ "lowest_failing_probe": 40000,
+ "rps": 10282.363333333333,
+ "p50_ms": 10.023,
+ "p95_ms": 75.647,
+ "p99_ms": 143.359,
+ "error_pct": 0,
+ "endpoints": [
+  {
+   "name": "GET /api/articles/:slug",
+   "count": 612762,
+   "rps": 2042.54,
+   "p50_ms": 8.783,
+   "p90_ms": 39.007,
+   "p95_ms": 55.807,
+   "p99_ms": 96.447,
+   "max_ms": 311.807,
+   "mean_ms": 15.9894046334466,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "200": 612762
+   }
+  },
+  {
+   "name": "GET /api/tags",
+   "count": 612025,
+   "rps": 2040.0833333333333,
+   "p50_ms": 6.619,
+   "p90_ms": 35.071,
+   "p95_ms": 51.551,
+   "p99_ms": 91.775,
+   "max_ms": 313.855,
+   "mean_ms": 13.738402945958063,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "200": 612025
+   }
+  },
+  {
+   "name": "GET /api/articles/:slug/comments",
+   "count": 612009,
+   "rps": 2040.03,
+   "p50_ms": 10.415,
+   "p90_ms": 59.551,
+   "p95_ms": 88.575,
+   "p99_ms": 161.151,
+   "max_ms": 433.919,
+   "mean_ms": 23.044211519765238,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "200": 612009
+   }
+  },
+  {
+   "name": "GET /api/articles",
+   "count": 362752,
+   "rps": 1209.1733333333334,
+   "p50_ms": 12.655,
+   "p90_ms": 61.247,
+   "p95_ms": 90.111,
+   "p99_ms": 162.559,
+   "max_ms": 435.199,
+   "mean_ms": 24.96314979104187,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "200": 362752
+   }
+  },
+  {
+   "name": "GET /api/articles/feed",
+   "count": 249287,
+   "rps": 830.9566666666667,
+   "p50_ms": 12.519,
+   "p90_ms": 60.863,
+   "p95_ms": 90.495,
+   "p99_ms": 162.815,
+   "max_ms": 440.319,
+   "mean_ms": 24.863993465363222,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "200": 249287
+   }
+  },
+  {
+   "name": "GET /api/profiles/:username",
+   "count": 166721,
+   "rps": 555.7366666666667,
+   "p50_ms": 8.455,
+   "p90_ms": 38.431,
+   "p95_ms": 55.231,
+   "p99_ms": 95.935,
+   "max_ms": 301.567,
+   "mean_ms": 15.645117693631864,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "200": 166721
+   }
+  },
+  {
+   "name": "GET /api/articles?author",
+   "count": 133733,
+   "rps": 445.77666666666664,
+   "p50_ms": 10.871,
+   "p90_ms": 59.519,
+   "p95_ms": 87.999,
+   "p99_ms": 161.151,
+   "max_ms": 437.503,
+   "mean_ms": 23.38898401292124,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "200": 133733
+   }
+  },
+  {
+   "name": "GET /api/articles?tag",
+   "count": 131883,
+   "rps": 439.61,
+   "p50_ms": 13.487,
+   "p90_ms": 65.439,
+   "p95_ms": 95.807,
+   "p99_ms": 170.879,
+   "max_ms": 432.383,
+   "mean_ms": 26.573958046146977,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "200": 131883
+   }
+  },
+  {
+   "name": "POST /api/articles/:slug/favorite",
+   "count": 59740,
+   "rps": 199.13333333333333,
+   "p50_ms": 16.815,
+   "p90_ms": 90.431,
+   "p95_ms": 133.759,
+   "p99_ms": 242.047,
+   "max_ms": 536.575,
+   "mean_ms": 35.66744204887852,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "200": 59740
+   }
+  },
+  {
+   "name": "POST /api/articles/:slug/comments",
+   "count": 41411,
+   "rps": 138.03666666666666,
+   "p50_ms": 14.647,
+   "p90_ms": 67.135,
+   "p95_ms": 96.895,
+   "p99_ms": 172.415,
+   "max_ms": 425.983,
+   "mean_ms": 27.618238414913876,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "201": 41411
+   }
+  },
+  {
+   "name": "GET /api/articles?favorited",
+   "count": 32986,
+   "rps": 109.95333333333333,
+   "p50_ms": 11.007,
+   "p90_ms": 59.391,
+   "p95_ms": 87.423,
+   "p99_ms": 161.279,
+   "max_ms": 339.199,
+   "mean_ms": 23.497927726914476,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "200": 32986
+   }
+  },
+  {
+   "name": "POST /api/profiles/:username/follow",
+   "count": 17979,
+   "rps": 59.93,
+   "p50_ms": 13.599,
+   "p90_ms": 64.735,
+   "p95_ms": 96.127,
+   "p99_ms": 176.511,
+   "max_ms": 404.735,
+   "mean_ms": 26.71660320373767,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "200": 17979
+   }
+  },
+  {
+   "name": "GET /api/user",
+   "count": 14581,
+   "rps": 48.60333333333333,
+   "p50_ms": 8.607,
+   "p90_ms": 39.103,
+   "p95_ms": 56.031,
+   "p99_ms": 96.511,
+   "max_ms": 285.439,
+   "mean_ms": 15.890480213977101,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "200": 14581
+   }
+  },
+  {
+   "name": "POST /api/articles",
+   "count": 13135,
+   "rps": 43.78333333333333,
+   "p50_ms": 24.015,
+   "p90_ms": 87.679,
+   "p95_ms": 119.551,
+   "p99_ms": 196.863,
+   "max_ms": 517.631,
+   "mean_ms": 38.706264255805145,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "201": 13135
+   }
+  },
+  {
+   "name": "DELETE /api/articles/:slug/favorite",
+   "count": 6448,
+   "rps": 21.493333333333332,
+   "p50_ms": 16.735,
+   "p90_ms": 87.615,
+   "p95_ms": 132.095,
+   "p99_ms": 248.703,
+   "max_ms": 539.135,
+   "mean_ms": 35.276581885856075,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "200": 6448
+   }
+  },
+  {
+   "name": "DELETE /api/profiles/:username/follow",
+   "count": 6394,
+   "rps": 21.313333333333333,
+   "p50_ms": 13.951,
+   "p90_ms": 67.967,
+   "p95_ms": 97.279,
+   "p99_ms": 175.999,
+   "max_ms": 424.447,
+   "mean_ms": 27.36003769158585,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "200": 6394
+   }
+  },
+  {
+   "name": "PUT /api/user",
+   "count": 4933,
+   "rps": 16.44333333333333,
+   "p50_ms": 10.759,
+   "p90_ms": 39.135,
+   "p95_ms": 56.383,
+   "p99_ms": 94.527,
+   "max_ms": 381.695,
+   "mean_ms": 17.742817352523826,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "200": 4933
+   }
+  },
+  {
+   "name": "POST /api/users/login",
+   "count": 3180,
+   "rps": 10.6,
+   "p50_ms": 93.119,
+   "p90_ms": 144.255,
+   "p95_ms": 157.311,
+   "p99_ms": 200.063,
+   "max_ms": 265.727,
+   "mean_ms": 102.10628930817617,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "200": 3180
+   }
+  },
+  {
+   "name": "DELETE /api/articles/:slug/comments/:id",
+   "count": 1919,
+   "rps": 6.3966666666666665,
+   "p50_ms": 13.191,
+   "p90_ms": 67.135,
+   "p95_ms": 96.575,
+   "p99_ms": 161.919,
+   "max_ms": 325.119,
+   "mean_ms": 26.41750964043772,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "204": 1919
+   }
+  },
+  {
+   "name": "PUT /api/articles/:slug",
+   "count": 772,
+   "rps": 2.5733333333333333,
+   "p50_ms": 17.599,
+   "p90_ms": 100.671,
+   "p95_ms": 146.559,
+   "p99_ms": 240.383,
+   "max_ms": 417.791,
+   "mean_ms": 38.04417357512955,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "200": 772
+   }
+  },
+  {
+   "name": "POST /api/users",
+   "count": 59,
+   "rps": 0.19666666666666666,
+   "p50_ms": 98.623,
+   "p90_ms": 166.143,
+   "p95_ms": 171.263,
+   "p99_ms": 242.431,
+   "max_ms": 244.735,
+   "mean_ms": 113.55932203389833,
+   "errors": 0,
+   "error_rate": 0,
+   "statuses": {
+    "201": 59
+   }
+  }
+ ],
+ "target_cpu": {
+  "samples": 299,
+  "cpu_pct": 95.72608695652168,
+  "steal_pct": 0.015050167224080268,
+  "app_pct_of_one_core": 92.88327759197328,
+  "db_pct_of_one_core": 0,
+  "nginx_pct_of_one_core": 0,
+  "all_columns": {
+   "app_box": 92.88327759197328,
+   "app_core": 743.0869565217386,
+   "app_pss": 1747.4113712374583,
+   "cpu": 95.72608695652168,
+   "disk_r": 1.3076923076923077,
+   "disk_w": 67.72240802675586,
+   "iow": 0.0026755852842809363,
+   "load1": 9.183645484949846,
+   "mem_avail": 13585.438127090301,
+   "mem_used": 2405.3177257525085,
+   "net_rx": 40432.82274247491,
+   "net_tx": 38363.832775919735,
+   "ngx_box": 0,
+   "ngx_core": 0,
+   "pg_box": 0,
+   "pg_core": 0,
+   "steal": 0.015050167224080268,
+   "vpc_rx": 40432.688963210705,
+   "vpc_tx": 38363.916387959864
+  }
+ },
+ "lg_boxes": [
+  {
+   "file": "box0.json",
+   "box_index": 0,
+   "host": "host-01",
+   "users": 39000,
+   "cpu_avg_measure_pct": 6.781296910870485,
+   "cpu_max_measure_pct": 15.738963531669866,
+   "proc_cpu_avg_measure_pct": 6.047554223981704,
+   "rss_peak_mb": 707.359375,
+   "fell_behind": false,
+   "requests_in_window": 3084709,
+   "tcp_connects": 39000
+  }
+ ],
+ "probes": [
+  {
+   "phase": "probe-4000",
+   "users": 4000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 1064.7166666666667,
+   "p50_ms": 1.118,
+   "p95_ms": 3.307,
+   "p99_ms": 4.779,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-8000",
+   "users": 8000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 2126.3166666666666,
+   "p50_ms": 1.961,
+   "p95_ms": 4.511,
+   "p99_ms": 6.327,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-16000",
+   "users": 16000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 4236.316666666667,
+   "p50_ms": 1.728,
+   "p95_ms": 4.371,
+   "p99_ms": 6.439,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-32000",
+   "users": 32000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 8467.983333333334,
+   "p50_ms": 3.057,
+   "p95_ms": 10.687,
+   "p99_ms": 20.399,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-64000",
+   "users": 64000,
+   "pass": false,
+   "lg_limited": false,
+   "rps": 7863.783333333334,
+   "p50_ms": 4837.375,
+   "p95_ms": 6602.751,
+   "p99_ms": 8658.943,
+   "error_pct": 0.08286935677695427
+  },
+  {
+   "phase": "probe-48000",
+   "users": 48000,
+   "pass": false,
+   "lg_limited": false,
+   "rps": 8758.083333333334,
+   "p50_ms": 1643.519,
+   "p95_ms": 2744.319,
+   "p99_ms": 3411.967,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-40000",
+   "users": 40000,
+   "pass": false,
+   "lg_limited": false,
+   "rps": 9939.083333333334,
+   "p50_ms": 63.807,
+   "p95_ms": 1080.319,
+   "p99_ms": 1516.543,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-36000",
+   "users": 36000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 9524.45,
+   "p50_ms": 5.027,
+   "p95_ms": 31.199,
+   "p99_ms": 97.023,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-38000",
+   "users": 38000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 10018.983333333334,
+   "p50_ms": 7.535,
+   "p95_ms": 60.991,
+   "p99_ms": 161.791,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-39000",
+   "users": 39000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 10335.066666666668,
+   "p50_ms": 2.473,
+   "p95_ms": 31.631,
+   "p99_ms": 145.919,
+   "error_pct": 0
+  }
+ ],
+ "holds": [
+  {
+   "phase": "hold-39000",
+   "users": 39000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 10282.363333333333,
+   "p50_ms": 10.023,
+   "p95_ms": 75.647,
+   "p99_ms": 143.359,
+   "error_pct": 0
+  }
+ ],
+ "started": "2026-10-24T18:15:35Z",
+ "finished": "2026-10-24T18:51:56Z"
+}

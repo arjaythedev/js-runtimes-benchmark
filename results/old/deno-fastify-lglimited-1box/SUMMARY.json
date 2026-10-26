@@ -1,0 +1,77 @@
+{
+ "label": "deno-fastify",
+ "lang": "deno-fastify",
+ "target": "http://mc-target,http://mc-target-2,http://mc-target-3,http://mc-target-4",
+ "load_boxes": [
+  "local=1"
+ ],
+ "status": "lg_limited",
+ "score_users": 0,
+ "lg_limited_at": 64000,
+ "highest_passing_probe": 32000,
+ "rps": 0,
+ "p50_ms": 0,
+ "p95_ms": 0,
+ "p99_ms": 0,
+ "error_pct": 0,
+ "probes": [
+  {
+   "phase": "probe-4000",
+   "users": 4000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 1062.7666666666667,
+   "p50_ms": 1.238,
+   "p95_ms": 3.335,
+   "p99_ms": 5.035,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-8000",
+   "users": 8000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 2126.75,
+   "p50_ms": 1.934,
+   "p95_ms": 4.667,
+   "p99_ms": 8.075,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-16000",
+   "users": 16000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 4251.383333333333,
+   "p50_ms": 2.201,
+   "p95_ms": 6.271,
+   "p99_ms": 14.319,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-32000",
+   "users": 32000,
+   "pass": true,
+   "lg_limited": false,
+   "rps": 8446.116666666667,
+   "p50_ms": 8.487,
+   "p95_ms": 64.351,
+   "p99_ms": 124.095,
+   "error_pct": 0
+  },
+  {
+   "phase": "probe-64000",
+   "users": 64000,
+   "pass": false,
+   "lg_limited": true,
+   "rps": 10255.016666666666,
+   "p50_ms": 263.167,
+   "p95_ms": 10100.735,
+   "p99_ms": 10379.263,
+   "error_pct": 18.792753465377107
+  }
+ ],
+ "holds": [],
+ "started": "2026-10-24T06:24:26Z",
+ "finished": "2026-10-24T06:41:35Z"
+}

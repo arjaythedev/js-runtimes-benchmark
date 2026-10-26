@@ -1,0 +1,22 @@
+{
+  "name": "conduit-node-uws",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "NODE_ENV=production node dist/index.js"
+  },
+  "dependencies": {
+    "bcrypt": "6.0.0",
+    "jose": "6.2.13",
+    "pg": "8.23.1",
+    "uWebSockets.js": "https://github.com/uNetworking/uWebSockets.js/archive/refs/tags/v20.71.0.tar.gz"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "6.0.0",
+    "@types/node": "26.6.5",
+    "@types/pg": "8.23.1",
+    "typescript": "6.0.3"
+  }
+}

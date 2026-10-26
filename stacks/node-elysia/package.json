@@ -1,0 +1,24 @@
+{
+  "name": "conduit-node-elysia",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "NODE_ENV=production node dist/index.js"
+  },
+  "dependencies": {
+    "@elysiajs/jwt": "1.4.2",
+    "@elysiajs/node": "1.4.5",
+    "@sinclair/typebox": "0.34.52",
+    "bcrypt": "6.0.0",
+    "elysia": "1.4.30",
+    "pg": "8.23.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "6.0.0",
+    "@types/node": "26.6.5",
+    "@types/pg": "8.23.1",
+    "typescript": "6.0.3"
+  }
+}
